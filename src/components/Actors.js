@@ -1,10 +1,22 @@
-import React from 'react';
-import { actors } from '../data';
+import React from "react";
+import { actors } from "../data";
 
 const Actors = () => {
   return (
     <div>
-      {/*{code here}*/}
+      <h1>Actors Page</h1>
+      {actors.map(d => (
+        <div>
+          <p>{d.name}</p>
+          <p>
+            <ul>
+              {d.movies.map(m => (
+                <li>{m}</li>
+              ))}
+            </ul>
+          </p>
+        </div>
+      ))}
     </div>
   );
 };
